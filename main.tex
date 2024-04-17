@@ -55,7 +55,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{0pt}\scshape\raggedright\large
+  \vspace{10pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
@@ -66,17 +66,17 @@
 
 \newcommand{\resumeItem}[1]{
   \item\small{
-    {#1 \vspace{-2pt}}
+    {#1 \vspace{4pt}}
   }
 }
 
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
+  \vspace{-10pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{0pt}
 }
 
 
@@ -132,86 +132,66 @@
 %---------- HEADING ----------
 
 \begin{center}
-    \textbf{\Huge \scshape Shangjie Zhou} \\ \vspace{6pt}
+    \vspace{100pt}
+    \textbf{\Huge \scshape Shangjie Zhou} \\ \vspace{10pt}
     \small
+    \faExternalLink \hspace{.5pt} \href{https://portfolio-website-dmf.pages.dev/}{Website}
+    \hspace{5pt}$|$\hspace{5pt}
     \faMobile \hspace{.5pt} \href{tel:403148885} {+61 403148885}
-    $|$
+    \hspace{5pt}$|$\hspace{5pt}
     \faAt \hspace{.5pt} \href{mailto:zhoujay73@gmail.com}{zhoujay73@gmail.com}
-    $|$
+    \hspace{5pt}$|$\hspace{5pt}
     \faLinkedinSquare \hspace{.5pt} \href{https://www.linkedin.com/in/shangjie-jay-zhou-3439a0199/}{LinkedIn}
+    
 \end{center}
 
 
-
-%----------- WORK EXPERIENCE -----------
-
-\section{Work Experience}
-  \vspace{3pt}
-  \resumeSubHeadingListStart
-
-    \resumeSubheading
-      {Bukalapak}{Melbourne, Australia}
-      {Full-stack Engineer - Trust and Fraud}{Jan 2023 \textbf{--} Present, Full-time}
-        \resumeItemListStart
-            \resumeItem{Participated in company-wide Cost Optimisation project, cutting down frontend infra cost by 40\% with practices on a variety of tools such as gitlab CI/CD, terraform, akamai(CDN) and Kubernetes.}
-            \resumeItem{Gave a 45min company-wide "Buka Tech Talk" about Containerisation,  revealing the insights of Docker's implementation through a range of live demo using Go and Ubuntu.}
-            \resumeItem{Implemented users' DTTOT(Suspected Terrorists and Terrorist Organizations) checking on reusable KYC micro-service to help Bukalapak subsidiaries comply with government regulations.}
-            \resumeItem{Increased the capacity of bulk-logout-users action from 100 to 50000 each job using Kafka.}
-        \resumeItemListEnd
-        
-    \resumeSubheading
-      {Navbit}{Sydney, Australia}
-      {Frontend Developer}{Oct 2022 \textbf{--} Feb 2023, Casual}
-        \resumeItemListStart
-            \resumeItem{Developed a web app with React.js and SVG, which provides a case-management application that also supports SVG annotation on X-ray scan images with geometries such as rulers and circular locators.}
-        \resumeItemListEnd
-
-    \resumeSubheading
-      {Biyou Technology}{Zhuhai, China}
-      {Frontend Developer}{Nov 2021 \textbf{--} Feb 2022, Internship}
-        \resumeItemListStart
-            \resumeItem{Developed and maintained frontend applications by collaborating with a cross-functional team including UI designers, product managers and other software engineers.}
-        \resumeItemListEnd
-  \resumeSubHeadingListEnd
+%----------- Personal Details -----------
 
 
-
-
-%----------- Projects -----------
-
-\section{Projects}
-  \vspace{2pt}
+\section{Summary}
+  \vspace{6pt}
   \resumeSubHeadingListStart
     \small{\item{
-        \textbf{\href{https://www.npmjs.com/package/simple-annotate-zsj}{Simple Annotator (NPM package):}}{ I published an NPM React component library that allows people to annotate images with SVGs} \\ \vspace{3pt}
-
-        \textbf{\href{https://github.com/ShangjieZhou/my-little-react/tree/main}{My Little React (GitHub Project):}}{ A self-implemented frontend framework that mimics React's basic mechanism of components' state management and interaction with the DOM} \\ \vspace{3pt}
-
-        \textbf{\href{https://dev.to/jayzho/understand-async-in-js-the-core-concepts-1j92}{Async in JS (Dev Blog):}}{ An article that explores the insights of Javascript's async mechanism } \\ \vspace{3pt}
+        {A \textbf{Passionate and Creative Software Engineer} with 
+         \textbf{robust background in both startup and large corporate environments}. Driven by a great passion for learning and excelling in problem-solving and communication, I thrive in fast-paced settings where I can tackle complex challenges both independently and collaboratively.} \\ \vspace{3pt}        
     }}
   \resumeSubHeadingListEnd
 
+%----------- WORK EXPERIENCE -----------
 
-%----------- EDUCATION -----------
-
-\section{Education}
-  \vspace{6pt}
+\section{Experience}
+  \vspace{16pt}
   \resumeSubHeadingListStart
-  
+
     \resumeSubheading
-      {University of New South Wales (UNSW)}{Sydney, Australia}
-      {Bachelor of Engineering(Honours) in Software Engineering}{Feb 2018 \textbf{--} Feb 2023}
-      \resumeSubHeadingListStart
-        \small{\item{
-            \textbf{Honours Class 1:} Graduated with the highest Class of Honours with WAM of at least 80 and thesis course mark of at least 65.}}
-        \small{\item{
-            \textbf{Dean's Honours List (2021):} For high achieving undergraduate students at UNSW Engineering.}}
-        \small{\item{
-            \textbf{Thesis - Validation of XML Electronic Invoices:} Built a backend API and a frontend application that dynamically validates UBL invoices against validation rules specified by users. }}
-        \small{\item{
-            \textbf{Courses:} Data Structures and Algorithms (93), Extended Algorithms and Programming Techniques (91), Computer Graphics (89), Programming Languages and Compilers (95), Computer Networks (93), Operating Systems (88). }}
-        \resumeSubHeadingListEnd
-    
+      {Bukalapak{\textnormal{  -\textit{ Full-stack Engineer (Trust-and-Fraud)} }}}{Melbourne, Australia}
+      {Go, MySQL, Vue.js, Docker, Kubernetes}{Jan 2023 \textbf{--} Present, Full-time}
+     
+        \resumeItemListStart
+            \resumeItem{Support the reliability of the company's all-commerce platforms by designing and developing Microservice Architecture Software that handles up to 1,000,000 requests daily, automating the process of analysing, detecting and preventing different fraudulent activities.}
+            \resumeItem{Develope highly reusable Frontend Components adopted across various verticals within the company.}
+            \resumeItem{Achieved a 26\% reduction in operational cost by migrating key services from Microsoft Azure to Google Cloud Platform in the company-wide cost reduction project.}
+            \resumeItem{Actively participate in 24/7 oncall rotation, effectively diagnosing and resolving service incidents to minimize service downtime.}
+        \resumeItemListEnd
+        \vspace{6pt}
+        
+    \resumeSubheading
+      {Navbit{\textnormal{  -\textit{ Frontend Developer} }}}{Sydney, Australia}
+      {React.js, SVG Programming, CSS}{Oct 2022 \textbf{--} Apr 2023, Casual}
+        \resumeItemListStart
+            \resumeItem{Led the frontend development for the company's X-ray image annotation web application, enhancing user experience and operational efficiency by delivering a user-centric solution for managing and annotating patients' X-ray images.}
+            \resumeItem{In charge of developing advanced frontend features including image annotation with fully customised SVGs, data exporting and uploading.}
+        \resumeItemListEnd
+        \vspace{6pt}
+        
+    \resumeSubheading
+      {Biyou Technology{\textnormal{  -\textit{ Frontend Developer} }}}{Zhuhai, China}
+      {React.js, Javascript, HTML, CSS, jQuery}{Nov 2021 \textbf{--} Feb 2022, Internship}
+        \resumeItemListStart
+            \resumeItem{Collaborated with UI designers, product managers and software engineers to launch new features for the company's AI products.}
+            \resumeItem{In charge of the frontend development of a smart markup tool and enhanced the user experience of the company's AI resume generator by optimizing algorithms and refactoring frontend components.}
+        \resumeItemListEnd
   \resumeSubHeadingListEnd
 
 
@@ -223,27 +203,60 @@
   \resumeSubHeadingListStart
     \small{\item{
         
-        \textbf{Programming Languages:}{ Proficient in Go, SQL, Python, Javascipt, HTML, CSS/SCSS; familiar with Java, C, Haskell, Dart, MIPS.} \\ \vspace{3pt}
+        {Languages:}{ \textbf{Go}, \textbf{Javascript}, \textbf{SQL}, Java, Python, C} \\ \vspace{3pt}
+
+        {Front-end:}{ \textbf{React.js}, \textbf{SVG}, \textbf{CSS}, \textbf{HTML},  Vue.js, Three.js, , Material-UI} \\ \vspace{3pt}
+
+        {Back-end:}{ \textbf{Go}, \textbf{gRPC}, \textbf{MySQL}, \textbf{Linux}, \textbf{Docker}, \textbf{Kubernetes}, kafka, Flask} \\ \vspace{3pt}
+
+        {Tool:}{ \textbf{Git}, argoCD \\ \vspace{3pt}
         
-        \textbf{Technologies:}{ Docker, Kubernetes, gRPC, MySQL, Git, Gitlab CI/CD, Linux, React.js, Vue.js, Three.js, SVGs, OpenGL, Flutter, Flask.} \\ \vspace{3pt}
+        {Cloud:}{ \textbf{Azure}, \textbf{GCP}} \\ \vspace{3pt}
         
-    }}
+    }}}
   \resumeSubHeadingListEnd
 
 
-%----------- Personal Details -----------
 
+%----------- Projects -----------
 
-\section{Personal Details}
-  \vspace{2pt}
+\section{Projects}
+  \vspace{6pt}
   \resumeSubHeadingListStart
     \small{\item{
+        \textbf{Portfolio Website:}{\href{https://portfolio-website-dmf.pages.dev/}{ https://portfolio-website-dmf.pages.dev/}}\\
+        \vspace{2pt}
+        { - A 3D Portfolio Website built with React.js and React-three-fiber }} \\ \vspace{8pt}
         
-        \textbf{Languages:}{ English(Full professional proficiency), Mandarin(Native).} \\ \vspace{3pt}
-        
-        \textbf{Work Rights:}{ Temporary Graduate Visa(Subclass 485), will be valid until Jun 2027.} \\ \vspace{3pt}
-        
-    }}
+        \textbf{Simple Annotator:}{\href{https://www.npmjs.com/package/simple-annotate-zsj}{ https://www.npmjs.com/package/simple-annotate-zsj }}\\
+        \vspace{2pt}
+        { - Receiving over 400 weekly downloads, this NPM React component library allows people to make handy annotations and measurements on images using SVGs } \\ \vspace{8pt}
+
+        \textbf{My Little React:}{\href{https://github.com/ShangjieZhou/my-little-react/tree/main}{ https://github.com/ShangjieZhou/my-little-react/tree/main}}\\
+        \vspace{2pt}
+        { - A self-implemented framework that mimics React's mechanism of state management and DOM interaction} \\ \vspace{3pt}}
+  \resumeSubHeadingListEnd
+
+
+
+%----------- EDUCATION -----------
+
+\section{Education}
+  \vspace{14pt}
+  \resumeSubHeadingListStart
+  
+    \resumeSubheading
+      {University of New South Wales (UNSW): Honours Class 1}{Sydney, Australia}
+      {Bachelor of Engineering(Honours) in Software Engineering}{Feb 2018 \textbf{--} Feb 2023}
+      \resumeSubHeadingListStart
+        \small{\item{
+            \textbf{Honours Class 1:} Graduated with the highest Class of Honours with WAM of at least 80 and thesis course mark of at least 65.}}
+        \small{\item{
+            \textbf{Dean's Honours List (2021 \& 2022):} For high achieving undergraduate students at UNSW Engineering.}}
+        \small{\item{
+            \textbf{Courses:} Data Structures and Algorithms (93), Extended Algorithms and Programming Techniques (91), Computer Graphics (89), Programming Languages and Compilers (95), Computer Networks (93), Operating Systems (88). }}
+        \resumeSubHeadingListEnd
+    
   \resumeSubHeadingListEnd
 
 
