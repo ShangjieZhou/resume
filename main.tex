@@ -19,7 +19,10 @@
 \usepackage{tabularx}
 \usepackage{hyphenat}
 \usepackage{fontawesome}
-\input{glyphtounicode}
+\usepackage{iftex}
+\ifPDFTeX
+  \input{glyphtounicode}
+\fi
 
 
 %---------- FONT OPTIONS ----------
@@ -59,7 +62,9 @@
 }{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
+\ifPDFTeX
+  \pdfgentounicode=1
+\fi
 
 %-------------------------
 % Custom commands
@@ -134,6 +139,7 @@
 \begin{center}
     \vspace{100pt}
     \textbf{\Huge \scshape Shangjie Zhou} \\ \vspace{10pt}
+    \textbf{\scshape Full stack engineer who owns what he builds} \\ \vspace{10pt}
     \small
     \faExternalLink \hspace{.5pt} \href{https://portfolio-website-dmf.pages.dev/}{Website}
     \hspace{5pt}$|$\hspace{5pt}
@@ -145,77 +151,107 @@
     
 \end{center}
 
-
-%----------- Personal Details -----------
-
-
-\section{Summary}
-  \vspace{6pt}
-  \resumeSubHeadingListStart
-    \small{\item{
-        {A \textbf{Passionate and Creative Software Engineer} with 
-         \textbf{robust background in both startup and large corporate environments}. Driven by a great passion for learning and excelling in problem-solving and communication, I thrive in fast-paced settings where I can tackle complex challenges both independently and collaboratively.} \\ \vspace{3pt}        
-    }}
-  \resumeSubHeadingListEnd
-
 %----------- WORK EXPERIENCE -----------
 
 \section{Experience}
-  \vspace{16pt}
+  \vspace{14pt}
   \resumeSubHeadingListStart
+    \resumeSubheading
+          {Full Stack Engineer / Team Lead{\textnormal{  -\textit{ Lyrebird Health} }}}{Melbourne, Australia}
+          {TypeScript, Node.js, Supabase, React, SvelteKit, Docker, GitHub Actions}{Dec 2024 \textbf{--} Present}
+         
+            \resumeItemListStart
+                \resumeItem{Tech lead of the Core Scribe team, which owns key domains including billing, user access management, onboarding, and third-party integrations.}
+                \resumeItem{Sole owner for the billing and subscriptions domains, driving both technical architecture and business decisions around pricing strategy, billing models, and operational workflows.}
+                \resumeItem{Designed and implemented billing microservice, extracting it from the monolithic system, refactoring legacy logic, and performing user data migration which enabled a seamless cut-over to the new billing platform.}
+                
+                
+            \resumeItemListEnd
+            \vspace{12pt}
+            
+      \resumeSubheading
+          {Full Stack Engineer{\textnormal{  -\textit{ The Play Projects} }}}{Melbourne, Australia}
+          {Typescript, Next.js, Tailwind CSS, Storybook, Prisma, AWS Lambda}{May 2024 \textbf{--} Dec 2024}
+         
+            \resumeItemListStart
+                \resumeItem{Led the design and implementation for TPP HUB that delivers a centralized Learning Management Platform for online learning, content delivery and account management by integrating the functionality of multiple legacy platforms}
+                
+            \resumeItemListEnd
+            \vspace{12pt}
 
     \resumeSubheading
-      {Bukalapak{\textnormal{  -\textit{ Full-stack Engineer (Trust-and-Fraud)} }}}{Melbourne, Australia}
-      {Go, MySQL, Vue.js, Docker, Kubernetes}{Jan 2023 \textbf{--} Present, Full-time}
+      {Full Stack Engineer{\textnormal{  -\textit{ Bukalapak} }}}{Melbourne, Australia}
+      {Go, Docker, Kafka, Kubernetes, GCP, Gitlab CI/CD, Vue.js}{Jan 2023 \textbf{--} Jan 2024}
      
         \resumeItemListStart
-            \resumeItem{Support the reliability of the company's all-commerce platforms by designing and developing Microservice Architecture Software that handles up to 1,000,000 requests daily, automating the process of analysing, detecting and preventing different fraudulent activities.}
-            \resumeItem{Develope highly reusable Frontend Components adopted across various verticals within the company.}
-            \resumeItem{Achieved a 26\% reduction in operational cost by migrating key services from Microsoft Azure to Google Cloud Platform in the company-wide cost reduction project.}
-            \resumeItem{Actively participate in 24/7 oncall rotation, effectively diagnosing and resolving service incidents to minimize service downtime.}
-        \resumeItemListEnd
-        \vspace{6pt}
+                \resumeItem{Designed and developed Microservice Architecture Software (SieveX and KYC2.0) that handles over 100,000 requests daily; automated the monitoring and prevention of various fraudulent activities.}
+                \resumeItem{Implemented "Reusable KYC" Frontend Components that were used across multiple teams and software products in 3 different business verticals.}
+            \resumeItemListEnd
+            \vspace{12pt}
         
     \resumeSubheading
-      {Navbit{\textnormal{  -\textit{ Frontend Developer} }}}{Sydney, Australia}
-      {React.js, SVG Programming, CSS}{Oct 2022 \textbf{--} Apr 2023, Casual}
+      {Frontend Engineer{\textnormal{  -\textit{Navbit } }}}{Sydney, Australia}
+      {React.js, Redux, SVG Programming, SCSS}{Oct 2022 \textbf{--} Apr 2023}
         \resumeItemListStart
-            \resumeItem{Led the frontend development for the company's X-ray image annotation web application, enhancing user experience and operational efficiency by delivering a user-centric solution for managing and annotating patients' X-ray images.}
-            \resumeItem{In charge of developing advanced frontend features including image annotation with fully customised SVGs, data exporting and uploading.}
+            \resumeItem{Led and implemented visualization modules of X-Ray image annotation using React.js and SVG programming, effectively improved Doctors' operational efficiency and user experience.}
         \resumeItemListEnd
-        \vspace{6pt}
-        
-    \resumeSubheading
-      {Biyou Technology{\textnormal{  -\textit{ Frontend Developer} }}}{Zhuhai, China}
-      {React.js, Javascript, HTML, CSS, jQuery}{Nov 2021 \textbf{--} Feb 2022, Internship}
-        \resumeItemListStart
-            \resumeItem{Collaborated with UI designers, product managers and software engineers to launch new features for the company's AI products.}
-            \resumeItem{In charge of the frontend development of a smart markup tool and enhanced the user experience of the company's AI resume generator by optimizing algorithms and refactoring frontend components.}
-        \resumeItemListEnd
-  \resumeSubHeadingListEnd
+        \vspace{-10pt}
+    \resumeSubHeadingListEnd
 
 
-
-%----------- SKILLS -----------
-
+%--------------------Skills
+            
 \section{Skills}
-  \vspace{2pt}
+  \vspace{6pt}
   \resumeSubHeadingListStart
     \small{\item{
         
-        {Languages:}{ \textbf{Go}, \textbf{Javascript}, \textbf{SQL}, Java, Python, C} \\ \vspace{3pt}
+        {\textbf{Languages}:}{ Typescript, SQL, Go, Python} \\ \vspace{3pt}
 
-        {Front-end:}{ \textbf{React.js}, \textbf{SVG}, \textbf{CSS}, \textbf{HTML},  Vue.js, Three.js, , Material-UI} \\ \vspace{3pt}
+        {\textbf{Front-end}:}{ React.js, Next.js, SVG Programming, CSS, HTML, Three.js, Tailwind} \\ \vspace{3pt}
 
-        {Back-end:}{ \textbf{Go}, \textbf{gRPC}, \textbf{MySQL}, \textbf{Linux}, \textbf{Docker}, \textbf{Kubernetes}, kafka, Flask} \\ \vspace{3pt}
+        {\textbf{Back-end}:}{ Node.js, Vitest, Docker, PostgreSQL, Go, gRPC, Linux, Kafka} \\ \vspace{3pt}
 
-        {Tool:}{ \textbf{Git}, argoCD \\ \vspace{3pt}
-        
-        {Cloud:}{ \textbf{Azure}, \textbf{GCP}} \\ \vspace{3pt}
-        
+        {\textbf{Tools}:}{ Git, Postman, Terraform \\ \vspace{3pt}
+
+        {\textbf{Cloud}:}{ AWS} \\ \vspace{3pt}
     }}}
   \resumeSubHeadingListEnd
+\newpage
 
+%----------- AWARDS -----------
+\section{Awards}
+  \vspace{14pt}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {First Class Honours}{2023}
+      {}{}
+      \vspace{-24pt}
+      \resumeItemListStart
+                \resumeItem{Received UNSW Engineering's Highest Class of Honours with a WAM of 80+ at the time of graduation.}
+            \resumeItemListEnd
+      \vspace{4pt}
+
+    \resumeSubheading
+      {SENG3011 Optiver Prize 3rd Place}{2022}
+      {}{}
+      \vspace{-24pt}
+      \resumeItemListStart
+                \resumeItem{Our team built the community platform "Helping Hands" that allows people to efficiently share/find information about charities or volunteer opportunities.}
+            \resumeItemListEnd
+      \vspace{4pt}
+
+    \resumeSubheading
+      {Dean's Honours List}{2021}
+      {}{}
+      \vspace{-24pt}
+      \resumeItemListStart
+                \resumeItem{For high achieving undergraduate students at UNSW Engineering faculty.}
+            \resumeItemListEnd
+      
+
+  \resumeSubHeadingListEnd
 
 
 %----------- Projects -----------
@@ -224,19 +260,15 @@
   \vspace{6pt}
   \resumeSubHeadingListStart
     \small{\item{
-        \textbf{Portfolio Website:}{\href{https://portfolio-website-dmf.pages.dev/}{ https://portfolio-website-dmf.pages.dev/}}\\
+        \textbf{Portfolio Website}{\href{https://portfolio-website-dmf.pages.dev/}{ (https://portfolio-website-dmf.pages.dev)}}\\
         \vspace{2pt}
         { - A 3D Portfolio Website built with React.js and React-three-fiber }} \\ \vspace{8pt}
         
-        \textbf{Simple Annotator:}{\href{https://www.npmjs.com/package/simple-annotate-zsj}{ https://www.npmjs.com/package/simple-annotate-zsj }}\\
+        \textbf{Open Source NPM Library "Simple Annotator"}{\href{https://www.npmjs.com/package/simple-annotate-zsj}{ (https://www.npmjs.com/package/simple-annotate-zsj) }}\\
         \vspace{2pt}
-        { - Receiving over 400 weekly downloads, this NPM React component library allows people to make handy annotations and measurements on images using SVGs } \\ \vspace{8pt}
-
-        \textbf{My Little React:}{\href{https://github.com/ShangjieZhou/my-little-react/tree/main}{ https://github.com/ShangjieZhou/my-little-react/tree/main}}\\
-        \vspace{2pt}
-        { - A self-implemented framework that mimics React's mechanism of state management and DOM interaction} \\ \vspace{3pt}}
+        { - An NPM React component library (peaked at 500+ weekly downloads) that lets people make annotations and measurements on images using SVGs } \\ \vspace{8pt}
+        \vspace{3pt}}
   \resumeSubHeadingListEnd
-
 
 
 %----------- EDUCATION -----------
@@ -248,14 +280,6 @@
     \resumeSubheading
       {University of New South Wales (UNSW): Honours Class 1}{Sydney, Australia}
       {Bachelor of Engineering(Honours) in Software Engineering}{Feb 2018 \textbf{--} Feb 2023}
-      \resumeSubHeadingListStart
-        \small{\item{
-            \textbf{Honours Class 1:} Graduated with the highest Class of Honours with WAM of at least 80 and thesis course mark of at least 65.}}
-        \small{\item{
-            \textbf{Dean's Honours List (2021 \& 2022):} For high achieving undergraduate students at UNSW Engineering.}}
-        \small{\item{
-            \textbf{Courses:} Data Structures and Algorithms (93), Extended Algorithms and Programming Techniques (91), Computer Graphics (89), Programming Languages and Compilers (95), Computer Networks (93), Operating Systems (88). }}
-        \resumeSubHeadingListEnd
     
   \resumeSubHeadingListEnd
 
