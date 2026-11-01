@@ -158,7 +158,7 @@
   \resumeSubHeadingListStart
     \resumeSubheading
           {Heidi Health}{Melbourne, Australia}
-          {Python, FastAPI, MongoDB, Redis, Stripe, Datadog, Kubernetes, Terraform, Next.js}{Dec 2025 \textbf{--} Present}
+          {Python, FastAPI, MongoDB, Redis, Stripe, Datadog, Next.js}{Dec 2025 \textbf{--} Present}
           \vspace{-4pt}
           \resumeSubSubheading{\textbf{Senior Software Engineer}}{Aug 2026 \textbf{--} Present}
           \vspace{-6pt}
@@ -168,16 +168,12 @@
             \resumeItemListStart
                 \resumeItem{Designed and led the rebuild of the billing data model: a unified billing account collection with per-product subscription rows, dual-write, backfill and field-level shadow read across 694k users and 36k teams in 5 regions, migrated behind feature flags with zero customer-visible change.}
                 \resumeItem{Shipped the backend billing for three product launches in nine months: Evidence with bundled Clinician and Practice plans, the Clinician Max beta with usage-based credit allowances, and Heidi 2.0 tier-by-seat pricing with Practice Max and seat management.}
-                \resumeItem{Built a local parity harness from 5,400 production-mined data shapes that cut the billing discrepancy fix loop from a week of production monitoring to 40 seconds, then drove a dozen discrepancy families to root cause and fix.}
-                \resumeItem{Hardened the Stripe integration: consolidated webhooks to one endpoint per region, added signature verification across 5 regions to close a security finding, removed an unauthenticated webhook, and added idempotency keys to every subscription and customer creation.}
-                \resumeItem{Introduced local JWT verification with shadow comparison and Auth0 support during the Kinde to Auth0 migration; every backend request now runs through it.}
-                \resumeItem{Owned two production incidents end to end, including a SEV1 database outage: root-caused, mitigated, wrote the post-incident reviews and the safe MongoDB index-migration runbook the team now follows.}
-                \resumeItem{Reviewed 310 pull requests, authored about 30 design and audit documents and the billing data-access rules, and wrote the tier and entitlement guide used to onboard engineers from other pods.}
+                \resumeItem{Contributed to Heidi's authentication migration from Kinde to Auth0 by optimising the token verification step with local JWT verification, which every backend request now runs through.}
             \resumeItemListEnd
             \vspace{12pt}
 
     \resumeSubheading
-          {Full Stack Engineer / Team Lead{\textnormal{  -\textit{ Lyrebird Health} }}}{Melbourne, Australia}
+          {Full Stack Engineer{\textnormal{  -\textit{ Lyrebird Health} }}}{Melbourne, Australia}
           {TypeScript, Node.js, Supabase, React, SvelteKit, Docker, GitHub Actions}{Dec 2024 \textbf{--} Dec 2025}
          
             \resumeItemListStart
@@ -199,7 +195,6 @@
             \resumeItemListEnd
             \vspace{12pt}
 
-    \newpage
     \resumeSubheading
       {Full Stack Engineer{\textnormal{  -\textit{ Bukalapak} }}}{Melbourne, Australia}
       {Go, Docker, Kafka, Kubernetes, GCP, Gitlab CI/CD, Vue.js}{Jan 2023 \textbf{--} Jan 2024}
