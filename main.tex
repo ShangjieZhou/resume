@@ -166,8 +166,9 @@
           \vspace{-2pt}
 
             \resumeItemListStart
-                \resumeItem{Designed and led the rebuild of the billing data model: a unified billing account collection with per-product subscription rows, dual-write, backfill and field-level shadow read across 694k users and 36k teams in 5 regions, migrated behind feature flags with zero customer-visible change.}
-                \resumeItem{Shipped the backend billing for three product launches in nine months: Evidence with bundled Clinician and Practice plans, the Clinician Max beta with usage-based credit allowances, and Heidi 2.0 tier-by-seat pricing with Practice Max and seat management.}
+                \resumeItem{Took Heidi's billing from a single product on a single plan to a multi-product architecture: shipped the Evidence launch backend (Evidence, Clinician and Practice plans) in two weeks, then designed and built the unified billing account model with one subscription row per product and payment vendor, dual-write, backfill and field-level shadow read across 694k users and 36k teams in 5 regions, with zero customer-visible change.}
+                \resumeItem{Introduced usage-based billing for Heidi Agents: owned the Stripe subscription lifecycle that provisions, raises, lowers and stops credit allowances, the idempotent Heidi 2.0 webhook pipeline, and the account repair that made opt-in safe; 65,000+ teams and users opted in within five weeks of GA, and the Clinician Max beta (1,000 users) and Practice Max launches shipped on it.}
+                \resumeItem{Built the seat-management architecture that lets one team subscription hold mixed Standard and Max seats billed per seat: seat inventory synced to Stripe, seat assignment at team creation, invitation and join, and allowances keyed to the seat holder.}
                 \resumeItem{Contributed to Heidi's authentication migration from Kinde to Auth0 by optimising the token verification step with local JWT verification, which every backend request now runs through.}
             \resumeItemListEnd
             \vspace{12pt}
